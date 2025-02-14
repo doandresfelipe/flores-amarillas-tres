@@ -2,25 +2,27 @@
 var audio = document.querySelector("audio");
 var lyrics = document.querySelector("#lyrics");
 
+
+
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "At the time", time: 15 },
-  { text: "The whisper of birds", time: 18 },
-  { text: "Lonely before the sun cried", time: 27 },
-  { text: "Fell from the sky", time: 32 },
-  { text: "Like water drops", time: 33 },
-  { text: "Where I'm now? I don't know why", time: 41 },
-  { text: "Nice butterflies in my hands", time: 47 },
-  { text: "Too much light for twilight", time: 54 },
-  { text: "In the mood for the flowers love", time: 59 },
-  { text: "That vision", time: 67 },
-  { text: "Really strong, blew my mind", time: 72 },
-  { text: "Silence Let me see what it was", time: 78 },
-  { text: "I only want to live in clouds", time: 83 },
-  { text: "Where I'm now? I don't know why", time: 91 },
-  { text: "Nice butterflies in my hands", time: 97 },
-  { text: "Too much light for twilight", time: 104 },
-  { text: "In the mood for the flowers love", time: 108 },
+  { text: "Me gusta que sepas donde estoy", time: 18 },
+  { text: "no por obligacion", time: 19},
+  { text: "sino por que tienes derecho a saber ", time: 27 },
+  { text: "a donde te llevo", time: 32 },
+  { text: "cuando no te llevo de la mano.", time: 33 },
+  { text: "Siempre te quiero ", time: 41 },
+  { text: "Aunque el silencio se adueñe de mis palabras", time: 47 },
+  { text: "Repito , siempre te quiero", time: 54 },
+  { text: "Como aquella constante", time: 59 },
+  { text: "que nunca cambia , aunque el entorno cambie.", time: 67 },
+  { text: "Mi amor por ti , mi mas profundo ser", time: 72 },
+  { text: "Aunque el tiempo se encargue de borrar", time: 78 },
+  { text: "Los rostros y voces que fueron nuestra verdad.", time: 83 },
+  { text: "", time: 91 },
+  { text: "Te llevare siempre en cada rincon de mi memoria", time: 97 },
+  { text: "En los susurros del viento", time: 104 },
+  { text: "Y los silencios que inundan el alma", time: 108 },
   { text: "At the time", time: 144 },
   { text: "The whisper of birds", time: 148 },
   { text: "Lonely before the sun cried", time: 153 },
@@ -42,7 +44,7 @@ function updateLyrics() {
 
   if (currentLine) {
     // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0.1; // Duración del efecto de aparición en segundos
+    var fadeInDuration = 0.01; // Duración del efecto de aparición en segundos
     var opacity = Math.min(1, (time - currentLine.time) / fadeInDuration);
 
     // Aplica el efecto de aparición
@@ -53,9 +55,10 @@ function updateLyrics() {
     lyrics.style.opacity = 0;
     lyrics.innerHTML = "";
   }
+  
 }
 
-setInterval(updateLyrics, 1000);
+setInterval(updateLyrics, 1);
 
 //funcion titulo
 // Función para ocultar el título después de 216 segundos
@@ -65,8 +68,9 @@ function ocultarTitulo() {
     "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
   setTimeout(function () {
     titulo.style.display = "none";
-  }, 3000); // Espera 3 segundos antes de ocultar completamente
+  }, 0); // Espera 3 segundos antes de ocultar completamente
 }
 
 // Llama a la función después de 216 segundos (216,000 milisegundos)
-setTimeout(ocultarTitulo, 216000);
+setTimeout(ocultarTitulo, 15000);
+

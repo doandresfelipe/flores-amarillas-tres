@@ -3,14 +3,14 @@
     font-family: 'Poppins',cursive;
 }
 body{
-    color: azure;
+    color: rgb(0, 0, 0);
     width: 100%;
     height: 82vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     /* padding-top: -30; */
 }
 
@@ -22,7 +22,8 @@ body{
 }
 
 .botones a{
-    background-color: #0a2be9;
+    background-color: #a211a7;
+    border: #39c6d6;
     padding: 9px;
     border-radius: 80px;
     -webkit-border-radius: 80px;
